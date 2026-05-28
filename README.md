@@ -18,7 +18,7 @@ df = pd.read_csv("your_sst_data.csv")
 t   = pd.to_datetime(df["time"]).map(pd.Timestamp.toordinal).to_numpy()
 sst = df["sst"].to_numpy(dtype=float)
 
-_, df_events = detect_mhw_extended(t, sst, climatology_period=[2003, 2023], label="my_station")
+_, df_events = detect_mhw_extended(t, sst)
 df_events.to_csv("results.csv", index=False)
 ```
 **Input data format**
