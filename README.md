@@ -3,13 +3,13 @@ Code supporting the publication: Nardi, R. U. et al., Persistent warm water anom
 
 Python module for detecting pre- and post-marine heatwaves periods, extending the standard Hobday et al. (2016) framework.
 
-Dependencies
+**Dependencies**
 
 marineHeatWaves — https://github.com/ecjoliver/marineHeatWaves
 
 numpy, pandas, scipy
 
-Usage
+**Usage**
 ```python
 import pandas as pd
 from mhw_extended_events import detect_mhw_extended
@@ -21,6 +21,6 @@ sst = df["sst"].to_numpy(dtype=float)
 _, df_events = detect_mhw_extended(t, sst, climatology_period=[2003, 2023], label="my_station")
 df_events.to_csv("results.csv", index=False)
 ```
-Input data format
+**Input data format**
 
 CSV with columns time (dates) and sst (daily sea surface temperature in °C).
