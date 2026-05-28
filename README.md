@@ -24,3 +24,9 @@ df_events.to_csv("results.csv", index=False)
 **Input data format**
 
 CSV with columns time (dates) and sst (daily sea surface temperature in °C).
+
+**Test files**
+
+A sample input (`test_sst_data.csv`) and expected output (`test_output.csv`) are provided to verify your setup:
+
+python mhw_extended_events.py
